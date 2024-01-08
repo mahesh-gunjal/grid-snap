@@ -1,0 +1,1 @@
+export const secondaryText = "text-secondary text-sm"

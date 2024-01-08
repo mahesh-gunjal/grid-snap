@@ -1,0 +1,52 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.w-2x {
+  width: calc(100% * 2);
+}
+
+body{
+  padding:80px 40px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 fixed columns */
+  gap: 1px; /* Gap between columns */
+  border-top: 1px dashed #98A2B3;
+  border-left: 1px dashed #98A2B3;
+  border-bottom: 1px dashed #98A2B3;
+}
+
+/* Style for grid items (columns) */
+.grid-item {
+  border-right: 1px dashed #98A2B3; /* Dotted line between columns */
+  border-bottom: 1px dashed #98A2B3; /* Dotted line between rows */
+  padding: 10px;
+  text-align: center;
+}
+
+.colspan-2 {
+  grid-column-end: span 2; /* Spans two columns */
+}
+
+/* Remove the right border for the last column */
+
+.grid-item:nth-last-child(-n+4):not(.colspan-2) {
+  border-bottom: none;
+}
